@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+
+        <title>Curso Phonegap</title>
+    </head>
+    <body>
+    
+<!-- Menu Lateral -->
+        
+        <div id="menu">
+            <ul class="ulMenu">
+                <li onclick="changePage('page1')">
+                    Plugins Phonegap
+                </li>
+                <li onclick="changePage('page2')">
+                    Test Camera
+                </li>   
+            </ul>
+        </div>
+        
+<!-- Pagina 1 -->
+        
+        <div class="body visible" id="Page-1">
+            <header>
+                <div onclick="menuButtonClick()" class="btn flaticon-menu27"></div>
+                <div class="title" id="title">Página 1</div>
+            </header>
+			<div class="content">
+                <button onclick="showAlert()">Alert Nativa!</button></br>
+                </br>
+                <button onclick="showNoNative()">Alerta no nativa</button></br>
+                </br>
+                <button onclick="showGPS()">Coordenadas</button></br>
+                </br>
+                <button onclick="Vibrate()">Vibrar</button></br>
+                </br>
+                <button onclick="onBatteryStatus()">Battery Status</button></br>
+                </br>
+                <button onclick="scanear()">Escanear</button></br>
+
+				<div class="content">
+					<h2 class="content-subhead">El resultado es: <span id="resultado"> #ERROR</span> </h2>
+				</div>
+			</div>
+			</div>
+        
+<!-- Pagina 2 -->        
+        
+        <div class="body hide" id="Page-2">
+            <header>
+                <div onclick="menuButtonClick()" class="btn flaticon-menu27"></div>
+                <div class="title" id="title">Página 2</div>
+            </header>
+			<div class="content">
+                <button onclick="takePhoto()">Tomar foto</button>
+                <img src="" id="imagen" />
+			</div>
+        </div>        
+        
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    	<script type="text/javascript">app.initialize();</script>
+
+
+    </body>
+</html>
